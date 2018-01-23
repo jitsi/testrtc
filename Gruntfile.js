@@ -89,7 +89,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'out/src/libs/main.js': ['out/src/libs/main.js']
+          'out/src/libs/main.js': ['out/src/main.js']
         }
       }
     },
