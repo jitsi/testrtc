@@ -83,7 +83,7 @@ module.exports = function(grunt) {
         compress: {
           global_defs: {
             'API_KEY': process.env.API_KEY,
-            'TURN_URL': '/static/turn_credentials'
+            'TURN_URL': '/static/turn_credentials?'
           },
           dead_code: true,
         },
