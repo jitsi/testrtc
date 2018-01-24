@@ -22,10 +22,7 @@
         <paper-textarea id="textArea" label="Describe your issue here" value="{{description}}"></paper-textarea>
       </div>
       <h3>Note</h3>
-      <p>The report will contain information about your device including network information 
-        that is useful to troubleshoot the issue.</p>
-      <p>You may want to share it with someone investigating your issue, or create a new
-        issue in the <a href="//github.com/webrtc/testrtc/issues/new">testrtc</a> project.</p>
+      <p>The report will contain information about your device including network information that is useful to troubleshoot the issue.</p>
       <div class="buttons">
         <paper-button on-tap="download" disabled$="{{submitting}}">Download report</paper-button>
         <paper-button dialog-dismiss disabled$="{{submitting}}">Cancel</paper-button>
