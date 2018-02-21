@@ -22,11 +22,9 @@
         <paper-textarea id="textArea" label="Describe your issue here" value="{{description}}"></paper-textarea>
       </div>
       <h3>Note</h3>
-      <p>The report will contain information about your device including network information that is useful to troubleshoot the issue.
-      Uploading the report creates a URL that is available for a period of 90 days.</p>
+      <p>The report will contain information about your device including network information that is useful to troubleshoot the issue.</p>
       <div class="buttons">
         <paper-button on-tap="download" disabled$="{{submitting}}">Download report</paper-button>
-        <paper-button on-tap="upload" disabled$="{{submitting}}">Upload report</paper-button>
         <paper-button dialog-dismiss disabled$="{{submitting}}">Cancel</paper-button>
       </div>
     </paper-dialog>
