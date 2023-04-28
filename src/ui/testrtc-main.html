@@ -194,7 +194,7 @@
                   onFail.apply(this, arguments);
                 } else {
                   reportFatal('Failed to get access to local media due to ' +
-                      'error: ' + error.name);
+                      'error: ' + error);
                 }
               });
         } catch (e) {
@@ -206,13 +206,8 @@
       },
 
       appendSourceId: function(id, type, constraints) {
-        if (constraints[type] === true) {
-          constraints[type] = {optional: [{sourceId: id}]};
-        } else if (typeof constraints[type] === 'object') {
-          if (typeof constraints[type].optional === 'undefined') {
-            constraints[type].optional = [];
-          }
-          constraints[type].optional.push({sourceId: id});
+        if (constraints[type] !== false && typeof(constraints[type]) !== 'undefined') {
+          constraints[type]['deviceId'] =  id;
         }
       },
 
