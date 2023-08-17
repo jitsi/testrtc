@@ -116,10 +116,13 @@ DataChannelThroughputTest.prototype = {
 // relay candidates for 40 seconds. Computes rtt and bandwidth estimation
 // average and maximum as well as time to ramp up (defined as reaching 75% of
 // the max bitrate. It reports infinite time to ramp up if never reaches it.
-addTest(testSuiteName.THROUGHPUT, testCaseName.VIDEOBANDWIDTH, function(test) {
-  var videoBandwidthTest = new VideoBandwidthTest(test);
-  videoBandwidthTest.run();
-});
+//
+// Disabled, because the removeVideoFec function assumes things about payload
+// type numbers and is broken on recent chrome versions in some environments.
+//addTest(testSuiteName.THROUGHPUT, testCaseName.VIDEOBANDWIDTH, function(test) {
+//  var videoBandwidthTest = new VideoBandwidthTest(test);
+//  videoBandwidthTest.run();
+//});
 
 function VideoBandwidthTest(test) {
   this.test = test;
